@@ -4,7 +4,7 @@
 bio rpc 是使用阻塞的io socket通信实现rpc调用的方式。</br>
 原理：把服务提供方(provider)接口注册到注册中心使用ConcurrentHashMap。</br>
 启动服务方开启ServerSocket循环读取客户端socket请求,获取到线程之后挂载到线程池中后台处理客户端请求并响应。
-主要实现代码在ServerProviderRegisterCenter类中</p>
+主要实现代码在ServerProviderRegisterCenter类中。</p>
 客户端消费（consumer）远程服务方注册的服务,创建代理对象使用socket发起实际请求sever socket传递请求的服务，
 请求的接口，请求接口的参数类型，请求接口的参数值，并获取请求响应的结果。主要实现代码ConsumerRpcProxy类中。</p>
   
