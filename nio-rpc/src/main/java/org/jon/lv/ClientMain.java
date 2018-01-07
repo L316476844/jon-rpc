@@ -35,9 +35,9 @@ public class ClientMain {
 
         System.out.println(user2);
 
-        User userbean = new User(66L, "张三", "238984334", "上海市");
+        User userBean = new User(66L, "张三", "238984334", "上海市");
 
-        System.out.println(userService.saveUser(userbean));
+        System.out.println(userService.saveUser(userBean));
 
     }
 }

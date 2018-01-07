@@ -96,7 +96,7 @@ public class RpcClient {
 
             /** 向缓冲区拼接请求内容使用  @||@  分隔**/
             StringBuilder builder = new StringBuilder(interfaceName);
-            /** 接口类名-方法名-参数类型数组-参数值数组- **/
+            /** 接口类名@||@方法名@||@参数类型1@**@参数值1@$$@参数类型2@**@参数值2 **/
             builder.append(separate).append(methodName).append(separate).append(parameters);
             ByteBuffer buffer = ByteBuffer.wrap(builder.toString().getBytes());
 
